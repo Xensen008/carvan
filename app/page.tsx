@@ -11,28 +11,28 @@ export default function Home() {
         <div className="absolute top-[-10%] left-[20%] w-200 h-200 bg-orange-900/10 blur-[150px] rounded-full animate-pulse opacity-40"></div>
         <div className="absolute bottom-[-20%] right-[-10%] w-150 h-150 bg-amber-900/10 blur-[120px] rounded-full animate-float-subtle opacity-30"></div>
 
-        {/* Bright Glassy Waves Animation */}
-        <div className="absolute top-1/4 left-0 right-0 h-96 opacity-20 pointer-events-none overflow-hidden mix-blend-screen">
+        {/* Darker, Subtler Waves Animation */}
+        <div className="absolute top-1/4 left-0 right-0 h-96 opacity-40 pointer-events-none overflow-hidden mix-blend-screen">
           <div className="absolute inset-0 flex items-center justify-center animate-wave-flow w-[200%]">
-            <svg viewBox="0 0 1440 320" className="w-full h-full text-white/10" preserveAspectRatio="none">
+            <svg viewBox="0 0 1440 320" className="w-full h-full text-white/5" preserveAspectRatio="none">
               <path fill="url(#grad1)" fillOpacity="1" d="M0,160L48,170.7C96,181,192,203,288,197.3C384,192,480,160,576,138.7C672,117,768,107,864,122.7C960,139,1056,181,1152,197.3C1248,213,1344,203,1392,197.3L1440,192V320H1392C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320H0Z"></path>
               <defs>
                 <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
-                  <stop offset="0%" style={{ stopColor: '#ffedd5', stopOpacity: 0.2 }} />
-                  <stop offset="50%" style={{ stopColor: '#ffffff', stopOpacity: 0.5 }} />
-                  <stop offset="100%" style={{ stopColor: '#ffedd5', stopOpacity: 0.2 }} />
+                  <stop offset="0%" style={{ stopColor: '#ea580c', stopOpacity: 0.1 }} />
+                  <stop offset="50%" style={{ stopColor: '#f97316', stopOpacity: 0.3 }} />
+                  <stop offset="100%" style={{ stopColor: '#ea580c', stopOpacity: 0.1 }} />
                 </linearGradient>
               </defs>
             </svg>
           </div>
-          <div className="absolute inset-0 flex items-center justify-center animate-wave-flow-reverse w-[200%] top-10 opacity-70">
+          <div className="absolute inset-0 flex items-center justify-center animate-wave-flow-reverse w-[200%] top-10 opacity-60">
             <svg viewBox="0 0 1440 320" className="w-full h-full text-white/5" preserveAspectRatio="none">
               <path fill="url(#grad2)" fillOpacity="1" d="M0,128L48,144C96,160,192,192,288,186.7C384,181,480,139,576,122.7C672,107,768,117,864,138.7C960,160,1056,192,1152,186.7C1248,181,1344,139,1392,117.3L1440,96V320H1392C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320H0Z"></path>
               <defs>
                 <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="0%">
-                  <stop offset="0%" style={{ stopColor: '#fff7ed', stopOpacity: 0.1 }} />
-                  <stop offset="50%" style={{ stopColor: '#fed7aa', stopOpacity: 0.3 }} />
-                  <stop offset="100%" style={{ stopColor: '#fff7ed', stopOpacity: 0.1 }} />
+                  <stop offset="0%" style={{ stopColor: '#c2410c', stopOpacity: 0.1 }} />
+                  <stop offset="50%" style={{ stopColor: '#fb923c', stopOpacity: 0.2 }} />
+                  <stop offset="100%" style={{ stopColor: '#c2410c', stopOpacity: 0.1 }} />
                 </linearGradient>
               </defs>
             </svg>
@@ -51,7 +51,7 @@ export default function Home() {
                   <div className="w-3 h-3 bg-orange-500 rounded-full shadow-[0_0_10px_#f97316]"></div>
                 </div>
               </div>
-              <span className="font-display font-bold text-xl tracking-wide text-white group-hover:text-orange-100 transition-colors">MusicWave</span>
+              <span className="font-display font-bold text-xl tracking-wide text-white group-hover:text-orange-100 transition-colors">Carvan</span>
             </div>
 
             <div className="hidden md:flex items-center gap-10 text-sm font-medium text-white/60">
@@ -331,6 +331,76 @@ export default function Home() {
             </div>
 
           </div>
+
+          {/* Additional Features - Bento Grid Style */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+            
+            {/* Feature 4: Spatial Audio (Wide Card) */}
+            <div className="md:col-span-2 group relative bg-[#0a0a0a] border border-white/5 rounded-3xl p-10 overflow-hidden hover:border-orange-500/30 transition-all duration-500">
+              <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-[0.03]"></div>
+              <div className="absolute top-0 right-0 w-2/3 h-full bg-linear-to-l from-orange-900/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              
+              <div className="relative z-10 flex flex-col md:flex-row items-center gap-10 h-full">
+                <div className="flex-1 text-center md:text-left">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-500/10 border border-orange-500/20 text-orange-400 text-xs font-bold uppercase tracking-widest mb-6">
+                    <span className="w-1.5 h-1.5 rounded-full bg-orange-500 animate-pulse"></span>
+                    New
+                  </div>
+                  <h3 className="text-3xl font-bold text-white mb-4">Spatial Audio</h3>
+                  <p className="text-white/40 leading-relaxed mb-6">
+                    Immerse yourself in a 360° soundstage. Our proprietary algorithm places every instrument in its own space around you.
+                  </p>
+                  <div className="flex items-center justify-center md:justify-start gap-4 text-xs font-mono text-white/30">
+                    <span className="flex items-center gap-1"><svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 13l4 4L19 7" /></svg> Dolby Atmos</span>
+                    <span className="flex items-center gap-1"><svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 13l4 4L19 7" /></svg> 360 Reality</span>
+                  </div>
+                </div>
+
+                {/* Visual: Rotating Rings/Orb */}
+                <div className="flex-1 flex items-center justify-center relative w-full h-48 md:h-full">
+                   <div className="relative w-40 h-40">
+                     <div className="absolute inset-0 border border-orange-500/30 rounded-full animate-[spin_10s_linear_infinite]"></div>
+                     <div className="absolute inset-4 border border-white/10 rounded-full animate-[spin_15s_linear_infinite_reverse]"></div>
+                     <div className="absolute inset-8 border border-white/5 rounded-full animate-[pulse_4s_ease-in-out_infinite]"></div>
+                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-orange-500 rounded-full shadow-[0_0_20px_#f97316]"></div>
+                     
+                     {/* Floating Particles */}
+                     <div className="absolute top-0 left-1/2 w-1 h-1 bg-white/50 rounded-full animate-ping"></div>
+                     <div className="absolute bottom-10 right-0 w-1.5 h-1.5 bg-orange-400/50 rounded-full animate-bounce"></div>
+                   </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Feature 5: Ecosystem Sync (Tall/Standard Card) */}
+            <div className="group relative bg-[#111] border border-white/5 rounded-3xl p-10 overflow-hidden hover:border-orange-500/30 transition-all duration-500 flex flex-col justify-between">
+              <div className="absolute inset-0 bg-linear-to-t from-black via-transparent to-transparent opacity-60"></div>
+              
+              <div className="relative z-10">
+                <div className="w-14 h-14 rounded-2xl bg-[#1a1a1a] border border-white/5 flex items-center justify-center mb-6 text-orange-500 group-hover:bg-orange-500 group-hover:text-white transition-all duration-300">
+                  <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" /></svg>
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-2">Connect</h3>
+                <p className="text-white/40 text-sm leading-relaxed">
+                  Start on your phone, finish on your desktop. Your queue follows you everywhere.
+                </p>
+              </div>
+
+              {/* Visual: Device Sync */}
+              <div className="relative h-24 mt-8 flex items-end justify-center gap-2 opacity-50 group-hover:opacity-100 transition-opacity">
+                 <div className="w-8 h-12 border border-white/20 rounded-md bg-white/5 backdrop-blur-sm flex items-center justify-center relative top-2 group-hover:top-0 transition-all duration-300 delay-75">
+                   <div className="w-4 h-4 rounded-full border border-orange-500/50"></div>
+                 </div>
+                 <div className="w-16 h-10 border border-white/20 rounded-md bg-white/5 backdrop-blur-sm flex items-center justify-center relative top-4 group-hover:top-0 transition-all duration-300 delay-100">
+                    <div className="w-6 h-6 rounded-full border border-orange-500/50"></div>
+                 </div>
+                 <div className="w-6 h-8 border border-white/20 rounded-md bg-white/5 backdrop-blur-sm flex items-center justify-center relative top-6 group-hover:top-0 transition-all duration-300 delay-150">
+                    <div className="w-2 h-2 rounded-full border border-orange-500/50"></div>
+                 </div>
+              </div>
+            </div>
+
+          </div>
         </section>
 
         {/* Pricing - Dark & Elegant */}
@@ -407,7 +477,7 @@ export default function Home() {
                 <div className="w-10 h-10 rounded-full border border-orange-500/30 bg-linear-to-br from-orange-500/10 to-transparent flex items-center justify-center">
                   <div className="w-4 h-4 bg-orange-500 rounded-full shadow-[0_0_15px_#f97316]"></div>
                 </div>
-                <span className="font-display font-bold text-2xl tracking-wide text-white group-hover:text-orange-100 transition-colors">MusicWave</span>
+                <span className="font-display font-bold text-2xl tracking-wide text-white group-hover:text-orange-100 transition-colors">Carvan</span>
               </a>
               <p className="text-white/40 text-lg leading-relaxed mb-8 max-w-sm">
                 The future of high-fidelity audio streaming. Experience sound as it was meant to be heard.
@@ -476,7 +546,7 @@ export default function Home() {
 
             {/* Giant Watermark */}
             <div className="absolute left-1/2 bottom-0 -translate-x-1/2 translate-y-[40%] text-[15vw] font-display font-bold text-white/2 pointer-events-none whitespace-nowrap select-none">
-              MUSICWAVE
+              Carvan
             </div>
           </div>
         </div>
