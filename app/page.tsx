@@ -10,6 +10,34 @@ export default function Home() {
         {/* Warm ambient glows - subtle, not flashy */}
         <div className="absolute top-[-10%] left-[20%] w-200 h-200 bg-orange-900/10 blur-[150px] rounded-full animate-pulse opacity-40"></div>
         <div className="absolute bottom-[-20%] right-[-10%] w-150 h-150 bg-amber-900/10 blur-[120px] rounded-full animate-float-subtle opacity-30"></div>
+
+        {/* Bright Glassy Waves Animation */}
+        <div className="absolute top-1/4 left-0 right-0 h-96 opacity-20 pointer-events-none overflow-hidden mix-blend-screen">
+          <div className="absolute inset-0 flex items-center justify-center animate-wave-flow w-[200%]">
+            <svg viewBox="0 0 1440 320" className="w-full h-full text-white/10" preserveAspectRatio="none">
+              <path fill="url(#grad1)" fillOpacity="1" d="M0,160L48,170.7C96,181,192,203,288,197.3C384,192,480,160,576,138.7C672,117,768,107,864,122.7C960,139,1056,181,1152,197.3C1248,213,1344,203,1392,197.3L1440,192V320H1392C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320H0Z"></path>
+              <defs>
+                <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" style={{ stopColor: '#ffedd5', stopOpacity: 0.2 }} />
+                  <stop offset="50%" style={{ stopColor: '#ffffff', stopOpacity: 0.5 }} />
+                  <stop offset="100%" style={{ stopColor: '#ffedd5', stopOpacity: 0.2 }} />
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <div className="absolute inset-0 flex items-center justify-center animate-wave-flow-reverse w-[200%] top-10 opacity-70">
+            <svg viewBox="0 0 1440 320" className="w-full h-full text-white/5" preserveAspectRatio="none">
+              <path fill="url(#grad2)" fillOpacity="1" d="M0,128L48,144C96,160,192,192,288,186.7C384,181,480,139,576,122.7C672,107,768,117,864,138.7C960,160,1056,192,1152,186.7C1248,181,1344,139,1392,117.3L1440,96V320H1392C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320H0Z"></path>
+              <defs>
+                <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" style={{ stopColor: '#fff7ed', stopOpacity: 0.1 }} />
+                  <stop offset="50%" style={{ stopColor: '#fed7aa', stopOpacity: 0.3 }} />
+                  <stop offset="100%" style={{ stopColor: '#fff7ed', stopOpacity: 0.1 }} />
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+        </div>
       </div>
 
       {/* Navigation - Ultra Minimal Glass */}
@@ -128,6 +156,34 @@ export default function Home() {
           <div className="lg:col-span-5 relative h-150 hidden lg:block perspective-1000 group/cards">
             {/* Decorative background glow */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-125 h-125 bg-gbg-linear-to-trm-orange-600/20 to-amber-600/10 rounded-full blur-[100px] animate-pulse"></div>
+
+            {/* Card 3: Waveform Analysis (The Deep Card) */}
+            <div className="absolute top-[10%] right-[10%] w-95 h-120 bg-[#050505]/95 backdrop-blur-sm border border-white/5 rounded-4xl p-6 shadow-xl z-0 origin-bottom transition-all duration-700 ease-out 
+              -rotate-12 translate-y-4 -translate-x-5 scale-90
+              group-hover/cards:-rotate-24 group-hover/cards:-translate-x-20 group-hover/cards:-translate-y-8 group-hover/cards:scale-95 group-hover/cards:border-orange-500/10 group-hover/cards:shadow-orange-900/5">
+
+              <div className="h-full flex flex-col relative overflow-hidden opacity-40 group-hover/cards:opacity-60 transition-opacity">
+                <div className="flex justify-between items-center mb-8">
+                  <span className="text-[9px] font-bold uppercase text-white/30 tracking-widest">
+                    Waveform Analysis
+                  </span>
+                  <span className="text-[9px] font-mono text-white/20">RAW</span>
+                </div>
+
+                {/* Abstract Waveform SVG */}
+                <div className="flex-1 flex items-center justify-center -mt-10">
+                  <svg className="w-full h-40 text-orange-500/30" viewBox="0 0 200 60" preserveAspectRatio="none">
+                    <path d="M0 30 C 20 30, 20 10, 40 30 S 60 50, 80 30 S 100 10, 120 30 S 140 50, 160 30 S 180 10, 200 30" stroke="currentColor" strokeWidth="1" fill="none" className="animate-pulse" />
+                    <path d="M0 30 C 20 30, 20 20, 40 30 S 60 40, 80 30 S 100 20, 120 30 S 140 40, 160 30 S 180 20, 200 30" stroke="currentColor" strokeWidth="0.5" fill="none" opacity="0.5" />
+                  </svg>
+                </div>
+
+                <div className="border-t border-white/5 pt-4 flex justify-between text-[9px] text-white/20 font-mono">
+                  <span>Input: Analog</span>
+                  <span>Gain: +2dB</span>
+                </div>
+              </div>
+            </div>
 
             {/* Card 2: EQ Visualization (The Peeking Card) */}
             <div className="absolute top-[10%] right-[10%] w-95 h-120 bg-[#0a0a0a]/90 backdrop-blur-xl border border-white/5 rounded-4xl p-6 shadow-xl z-10 origin-bottom transition-all duration-700 ease-out 

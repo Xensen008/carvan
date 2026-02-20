@@ -156,3 +156,40 @@ body {
 .animate-eq-random {
   animation: equalizer-random 0.8s ease-in-out infinite;
 }
+
+/* Glassy Wave Animation */
+@keyframes wave-flow {
+  0% {
+    transform: translateX(0) translateZ(0) scaleY(1);
+  }
+
+  50% {
+    transform: translateX(-25%) translateZ(0) scaleY(0.85);
+  }
+
+  100% {
+    transform: translateX(-50%) translateZ(0) scaleY(1);
+  }
+}
+
+.animate-wave-flow {
+  animation: wave-flow 20s infinite linear;
+}
+
+@keyframes wave-flow-reverse {
+  0% {
+    transform: translateX(-50%) translateZ(0) scaleY(1);
+  }
+
+  50% {
+    transform: translateX(-25%) translateZ(0) scaleY(1.15);
+  }
+
+  100% {
+    transform: translateX(0) translateZ(0) scaleY(1);
+  }
+}
+
+.animate-wave-flow-reverse {
+  animation: wave-flow-reverse 25s infinite linear;
+}
